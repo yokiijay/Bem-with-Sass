@@ -1,0 +1,7 @@
+$primary-color: royalblue;
+
+@mixin rect {
+  width: 200px;
+  height: 200px;
+  background: $primary-color;
+}

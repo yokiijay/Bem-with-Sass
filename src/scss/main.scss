@@ -1,0 +1,19 @@
+@import 'mixins';
+
+html, body {
+  background: rgb(74,82,87);
+}
+
+.box {
+  @include rect;
+  border-radius: 50%;
+  background: hotpink;
+}
+
+.pic {
+  width: 200px;
+  height: 200px;
+  background: url('../img/webpack.svg') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
