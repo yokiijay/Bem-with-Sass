@@ -1,19 +1,50 @@
+@import 'base';
 @import 'mixins';
 
 html, body {
   background: rgb(74,82,87);
 }
 
-.box {
-  @include rect;
-  border-radius: 50%;
-  background: hotpink;
-}
+.header {
+  &{  // self styling
+    width: 100vw;
+    height: 56px;
+    background: #3f3f3f;
+    border-bottom: 1px solid $gray-dark;
+  }
 
-.pic {
-  width: 200px;
-  height: 200px;
-  background: url('../img/webpack.svg') no-repeat;
-  background-size: contain;
-  background-position: center;
+  .nav{
+    &{  // self styling
+      min-width: 768px;
+      max-width: 1440px;
+      display: flex;
+    }
+    .logo{
+      width: 100px;
+      &__img{
+        width: 100%;
+      }
+    }
+    .menu{
+      width: 407px;
+      &__item{
+        padding: 15px;
+        display: inline-block;
+      }
+      &__link{
+        color: $secondary-basic;
+        font-size: 17px;
+        font-family: Georgia, "Times New Roman", Times, "Songti SC", serif;
+        line-height: 26px;
+        text-decoration: none;
+        &--active{
+          color: $primary-basic;
+        }
+        .search{
+
+        }
+      }
+    }
+    .tool-bar{}
+  }
 }

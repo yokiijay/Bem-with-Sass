@@ -1,7 +1,5 @@
-$primary-color: royalblue;
+$primary-basic: #ea6f5a;
+$secondary-basic: #c8c8c8;
 
-@mixin rect {
-  width: 200px;
-  height: 200px;
-  background: $primary-color;
-}
+$gray-basic: #3f3f3f;
+$gray-dark: #333333;
