@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const htmlplugin = require('html-webpack-plugin')
 const cleanplugin = require('clean-webpack-plugin')
+const extractplugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -39,6 +40,10 @@ module.exports = {
     new htmlplugin({
       template: path.join(__dirname, 'src', 'template.ejs'),
       title: 'hello sass'
+    }),
+    new htmlplugin({
+      template: path.join(__dirname, 'src', 'about.html'),
+      filename: 'about.html'
     })
   ]
 }

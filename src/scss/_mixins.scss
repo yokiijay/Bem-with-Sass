@@ -5,3 +5,8 @@ $gray-basic: #3f3f3f;
 $gray-dark: #333333;
 $gray-light: #4f4f4f;
 $gray-brighter: #969696;
+
+@mixin size($width, $height:$width){
+  width: $width;
+  height: $height;
+}

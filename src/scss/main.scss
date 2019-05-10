@@ -180,3 +180,8 @@ html, body {
     }
   }
 }
+
+.box{
+  @include size(300px, 200px);
+  background: $primary-basic;
+}
