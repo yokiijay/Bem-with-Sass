@@ -1,5 +1,6 @@
 @import 'base';
 @import 'mixins';
+@import url('//at.alicdn.com/t/font_1036286_magglbhpvd.css');
 
 html, body {
   background: rgb(74,82,87);
@@ -17,8 +18,11 @@ html, body {
     &{  // self styling
       min-width: 768px;
       max-width: 1440px;
+      height: inherit;
       display: flex;
+      align-items: center;
     }
+
     .logo{
       width: 100px;
       &__img{
@@ -26,25 +30,153 @@ html, body {
       }
     }
     .menu{
-      width: 407px;
+      min-width: 407px;
+      display: flex;
+      align-items: center;
       &__item{
         padding: 15px;
         display: inline-block;
       }
       &__link{
-        color: $secondary-basic;
         font-size: 17px;
         font-family: Georgia, "Times New Roman", Times, "Songti SC", serif;
         line-height: 26px;
-        text-decoration: none;
         &--active{
           color: $primary-basic;
         }
-        .search{
-
+      }
+      .search{
+        position: relative;
+        &__input{
+          width: 160px;
+          height: 38px;
+          border: none;
+          padding: {
+            left: 20px;
+            right: 40px;
+            top: 0;bottom: 0;
+          }
+          border-radius: 40px;
+          background: $gray-light;
+          color: $secondary-basic;
+          font-size: 14px;
+          transition: width .2s ease-in-out;
+          &::placeholder{
+            color: $gray-brighter;
+          }
+          &:focus{
+            width: 240px;
+          }
+        }
+        &__icon{
+          position: absolute;
+          right: 10px;
+          top: calc(50%);
+          transform: translateY(-50%);
+          color: $gray-brighter;
         }
       }
     }
-    .tool-bar{}
+
+    .tool-bar{
+      display: flex;
+      height: inherit;
+
+      .iconfont{
+        font-size: 1.4em;
+      }
+      &__item{
+        padding: 17px 10px;
+      }
+      &__mode{
+      }
+      &__beta{
+        .iconfont{ font-size: 1.6rem; color: $primary-basic;}
+      }
+      &__dropdown{
+        padding: 0;
+      }
+      .dropdown{
+        position: relative;
+        width: 85px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+          background: $gray-dark;
+        }
+        &__link{
+          display: inline-block;
+          overflow: hidden;
+          line-height: 0;
+        }
+        &__avatar{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+        &__arrow{
+          margin-left: 6px;
+          width: 0;
+          height: 0;
+          border: {
+            width: 7px 6px 0px;
+            style: solid;
+            color: $gray-brighter transparent transparent transparent;
+          }
+          cursor: pointer;
+        }
+        &:hover{
+          .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+      .dropdown-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 160px;
+        background: $gray-basic;
+        box-shadow: 0 2px 8px rgba(0,0,0,.1);
+        border-radius: 0 0 4px 4px;
+        &__item:first-child{
+          padding-top: 20px;
+        }
+        &__item:last-child{
+          padding-bottom: 20px;
+        }
+        &__item{
+          padding: 10px 20px;
+          height: 51px;
+          display: flex;
+          align-items: center;
+          &:hover{
+            background: $gray-dark;
+          }
+        }
+        &__link{
+          display: flex;
+        }
+        &__title{
+          padding-left: 14px;
+        }
+        .iconfont{
+          color: $primary-basic;
+        }
+      }
+
+      &__write{
+        background: $primary-basic;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+    }
   }
 }
