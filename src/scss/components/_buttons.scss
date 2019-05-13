@@ -1,0 +1,22 @@
+$btn-color-prymary: $color-primary;
+$btn-color-prymary-dark: darken($btn-color-prymary, 10%);
+$btn-color-prymary-light: lighten($btn-color-prymary, 10%);
+
+@mixin button(
+  $background,
+  $color: white,
+  $border-radius: 100px,
+  $hover-background: darken($background, 5%),
+){
+  background: $background;
+  color: $color;
+  border-radius: $border-radius;
+  &:hover{
+    background: $hover-background;
+  }
+}
+
+.btn {
+  @include button($color-primary);
+  padding: 10px 20px;
+}

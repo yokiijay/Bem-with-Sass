@@ -3,6 +3,9 @@
 @import 'base';
 @import url('//at.alicdn.com/t/font_1036286_magglbhpvd.css');
 
+// components
+@import './components/buttons';
+
 html, body {
   background: rgb(74,82,87);
 }
@@ -170,13 +173,6 @@ html, body {
         .iconfont{
           color: $color-primary;
         }
-      }
-
-      &__write{
-        background: $color-primary;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 20px;
       }
     }
   }
