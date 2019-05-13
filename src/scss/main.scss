@@ -1,5 +1,6 @@
-@import 'base';
+@import 'variables';
 @import 'mixins';
+@import 'base';
 @import url('//at.alicdn.com/t/font_1036286_magglbhpvd.css');
 
 html, body {
@@ -11,7 +12,7 @@ html, body {
     width: 100vw;
     height: 56px;
     background: #3f3f3f;
-    border-bottom: 1px solid $gray-dark;
+    border-bottom: 1px solid $color-darkness;
   }
 
   .nav{
@@ -42,7 +43,7 @@ html, body {
         font-family: Georgia, "Times New Roman", Times, "Songti SC", serif;
         line-height: 26px;
         &--active{
-          color: $primary-basic;
+          color: $color-primary;
         }
       }
       .search{
@@ -57,12 +58,12 @@ html, body {
             top: 0;bottom: 0;
           }
           border-radius: 40px;
-          background: $gray-light;
-          color: $secondary-basic;
+          background: lighten($color-dark, 5%);
+          color: $color-light;
           font-size: 14px;
           transition: width .2s ease-in-out;
           &::placeholder{
-            color: $gray-brighter;
+            color: darken($color-light, 10%);
           }
           &:focus{
             width: 240px;
@@ -91,7 +92,7 @@ html, body {
       &__mode{
       }
       &__beta{
-        .iconfont{ font-size: 1.6rem; color: $primary-basic;}
+        .iconfont{ font-size: 1.6rem; color: $color-primary;}
       }
       &__dropdown{
         padding: 0;
@@ -105,7 +106,7 @@ html, body {
         align-items: center;
 
         &:hover{
-          background: $gray-dark;
+          background: $color-darkness;
         }
         &__link{
           display: inline-block;
@@ -142,7 +143,7 @@ html, body {
         left: 0;
         top: 100%;
         width: 160px;
-        background: $gray-basic;
+        background: $color-dark;
         box-shadow: 0 2px 8px rgba(0,0,0,.1);
         border-radius: 0 0 4px 4px;
         &__item:first-child{
@@ -157,7 +158,7 @@ html, body {
           display: flex;
           align-items: center;
           &:hover{
-            background: $gray-dark;
+            background: $color-darkness;
           }
         }
         &__link{
@@ -167,12 +168,12 @@ html, body {
           padding-left: 14px;
         }
         .iconfont{
-          color: $primary-basic;
+          color: $color-primary;
         }
       }
 
       &__write{
-        background: $primary-basic;
+        background: $color-primary;
         color: white;
         padding: 10px 20px;
         border-radius: 20px;
@@ -183,5 +184,4 @@ html, body {
 
 .box{
   @include size(300px, 200px);
-  background: $primary-basic;
 }

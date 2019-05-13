@@ -38,12 +38,7 @@ module.exports = {
   plugins: [
     new cleanplugin(),
     new htmlplugin({
-      index: path.join(__dirname, 'src', 'index.html'),
-      title: 'hello sass'
-    }),
-    new htmlplugin({
-      index: path.join(__dirname, 'src', 'about.html'),
-      filename: 'about.html'
+      template: path.join(__dirname, 'src', 'index.html'),
     })
   ]
 }

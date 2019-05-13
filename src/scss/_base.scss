@@ -1,5 +1,3 @@
-@import 'mixins';
-
 *{
   box-sizing: border-box;
 }
@@ -20,7 +18,7 @@ ul{
 }
 a{
   text-decoration: none;
-  color: $secondary-basic;
+  color: $color-light;
 }
 input{
   outline: none;
