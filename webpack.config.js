@@ -38,11 +38,11 @@ module.exports = {
   plugins: [
     new cleanplugin(),
     new htmlplugin({
-      template: path.join(__dirname, 'src', 'template.ejs'),
+      index: path.join(__dirname, 'src', 'index.html'),
       title: 'hello sass'
     }),
     new htmlplugin({
-      template: path.join(__dirname, 'src', 'about.html'),
+      index: path.join(__dirname, 'src', 'about.html'),
       filename: 'about.html'
     })
   ]

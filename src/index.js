@@ -1,4 +1,4 @@
-import './template.ejs'
+import './index.html'
 import './about.html'
 import './scss/main.scss'
 
